@@ -4,14 +4,14 @@ import java.util.Scanner;
 class guess {
     int a,b,c=0;
     public void guess() {
-        Random com_input=new Random();
-        a=com_input.nextInt(0,100);
+        Random computer_input=new Random();
+        a=computer_input.nextInt(0,100);
         System.out.println("Computer has guessed the number !!");
     }
 
     public void takeUserInput() {
         System.out.println("The game begins ");
-        Scanner sc=new Scanner(System.in);
+        Scanner user_input=new Scanner(System.in);
         for (int i=0; i<15; i++) {
             if (c==10) {
                 System.out.println("Game over !!, better luck next time.");
@@ -19,7 +19,7 @@ class guess {
             }
             c++;
             System.out.print("Guess the number: ");
-            b=sc.nextInt();
+            b=user_input.nextInt();
             if (b>a) {
                 System.out.println("Too high, think of a smaller number");
             } else if (b<a) {
@@ -46,9 +46,9 @@ class guess {
 public class game {
     public static void main(String[] args) {
         System.out.println("Game: Guess the number");
-        guess game=new guess();
-        game.guess();
-        game.takeUserInput();
-        game.score();
+        guess gamee=new guess();
+        gamee.guess();
+        gamee.takeUserInput();
+        gamee.score();
     }
 }
